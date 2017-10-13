@@ -3,7 +3,7 @@ package com.example.stri.virtualbank;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class connexion extends AppCompatActivity {
+public class Connexion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
