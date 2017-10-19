@@ -23,12 +23,6 @@ public class ReleveBancaire extends AppCompatActivity {
         TextView txcol3 = (TextView) findViewById(R.id.col3TextView);
         TextView txcol4 = (TextView) findViewById(R.id.col4TextView);
 
-        //init le début du tableau
-        txcol1.setText("Dépense\n");
-        txcol2.setText("Montant\n");
-        txcol3.setText("Date\n");
-        txcol4.setText("Catégorie\n");
-
         for(int i = 0; i < tableauDepense.length; i++){
             txcol1.setText(txcol1.getText() + tableauDepense[i] + "\n");
             txcol2.setText(txcol2.getText() + String.valueOf(tableauMontant[i]) + "\n");

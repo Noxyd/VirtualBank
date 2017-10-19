@@ -2,6 +2,7 @@ package com.example.stri.virtualbank;
 
 /**
  * Created by Samuel on 13/10/2017.
+ * Modified by Alexis on 18/10/2017
  */
 
 import android.content.Intent;
