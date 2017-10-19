@@ -20,7 +20,7 @@ public class Inscription extends AppCompatActivity {
         btn_inscription_valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View s) {
-                Intent intent = new Intent(Inscription.this, Connexion.class);
+                Intent intent = new Intent(Inscription.this, connexion.class);
                 startActivity(intent);
             }
         });

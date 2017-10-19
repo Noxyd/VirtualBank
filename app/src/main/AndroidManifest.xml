@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Connexion">
+        <activity android:name=".connexion">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Accueil" />
+        <activity android:name=".ReleveBancaire" />
         <activity android:name=".Inscription"></activity>
     </application>
 

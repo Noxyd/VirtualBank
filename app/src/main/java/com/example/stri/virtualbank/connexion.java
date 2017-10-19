@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Connexion extends AppCompatActivity {
+public class connexion extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class Connexion extends AppCompatActivity {
 
                 //TODO Ajouter les contrôles de compte
 
-                Intent intent = new Intent(Connexion.this, Accueil.class);
+                Intent intent = new Intent(connexion.this, Accueil.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +35,7 @@ public class Connexion extends AppCompatActivity {
 
                 //TODO Ajouter les contrôles de compte
 
-                Intent intent = new Intent(Connexion.this, Inscription.class);
+                Intent intent = new Intent(connexion.this, Inscription.class);
                 startActivity(intent);
             }
         });
