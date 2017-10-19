@@ -15,5 +15,20 @@ public class Accueil extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
+
+        // -    to remove   -
+        //  -   BEGIN     -
+        final Button btn_rlv = (Button) findViewById(R.id.id_btn_releve_bancaire);
+
+        btn_rlv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Accueil.this, ReleveBancaire.class);
+                startActivity(intent);
+            }
+        });
+
+        // -    END    -
     }
 }
