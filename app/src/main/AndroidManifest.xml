@@ -26,6 +26,7 @@
         <activity android:name=".Inscription" />
         <activity android:name=".ListeCompte" />
         <activity android:name=".AjoutBanque" />
+        <activity android:name=".Stat" />
     </application>
 
 </manifest>
