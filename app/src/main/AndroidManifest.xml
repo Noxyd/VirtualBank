@@ -23,7 +23,9 @@
         </activity>
         <activity android:name=".Accueil" />
         <activity android:name=".ReleveBancaire" />
-        <activity android:name=".Inscription"></activity>
+        <activity android:name=".Inscription" />
+        <activity android:name=".ListeCompte" />
+        <activity android:name=".AjoutBanque" />
     </application>
 
 </manifest>

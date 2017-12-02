@@ -20,12 +20,23 @@ public class Accueil extends AppCompatActivity{
         // -    to remove   -
         //  -   BEGIN     -
         final Button btn_rlv = (Button) findViewById(R.id.id_btn_releve_bancaire);
+        final Button btn_lcpt = (Button) findViewById(R.id.id_btn_liste_compte);
 
         btn_rlv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(Accueil.this, ReleveBancaire.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btn_lcpt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Accueil.this, ListeCompte.class);
                 startActivity(intent);
             }
         });

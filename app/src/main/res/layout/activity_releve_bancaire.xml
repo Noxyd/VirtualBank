@@ -176,8 +176,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="30"
-            android:weightSum="100"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="100">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -188,12 +188,12 @@
                     android:id="@+id/editText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="23dp"
+                    android:layout_toEndOf="@+id/button"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Catégorie"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/button"
-                    android:layout_marginStart="23dp" />
+                    android:text="Catégorie" />
 
                 <Button
                     android:id="@+id/button"
@@ -251,11 +251,11 @@
                     </LinearLayout>
 
                     <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="33"
-                    android:orientation="horizontal"
-                    android:weightSum="100">
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="33"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
 
                         <TextView
                             android:id="@+id/tv_categorie3"
@@ -375,7 +375,6 @@
                             android:text="Categorie9" />
                     </LinearLayout>
                 </LinearLayout>
-
 
 
             </LinearLayout>
