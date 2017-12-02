@@ -120,4 +120,14 @@
         android:layout_marginEnd="18dp"
         app:layout_constraintRight_toRightOf="@+id/id_btn_inscription" />
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="120dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/id_text_mail"
+        tools:layout_editor_absoluteX="132dp" />
+
 </android.support.constraint.ConstraintLayout>
