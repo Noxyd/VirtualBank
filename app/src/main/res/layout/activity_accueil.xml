@@ -45,6 +45,15 @@
             tools:layout_editor_absoluteY="100dp" />
 
         <Button
+            android:id="@+id/id_btn_virement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_btn_stat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Virement" />
+
+        <Button
             android:id="@+id/id_btn_stat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

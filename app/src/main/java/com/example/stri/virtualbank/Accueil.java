@@ -22,6 +22,8 @@ public class Accueil extends AppCompatActivity{
         final Button btn_rlv = (Button) findViewById(R.id.id_btn_releve_bancaire);
         final Button btn_lcpt = (Button) findViewById(R.id.id_btn_liste_compte);
         final Button btn_stat = (Button) findViewById(R.id.id_btn_stat);
+        final Button btn_vir = (Button) findViewById(R.id.id_btn_virement);
+
 
 
         btn_rlv.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +50,15 @@ public class Accueil extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Accueil.this, Stat.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_vir.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Accueil.this, AjoutVirement.class);
                 startActivity(intent);
             }
         });

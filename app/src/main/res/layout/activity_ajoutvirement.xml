@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:text="Virement"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="105dp"
+            tools:layout_editor_absoluteY="42dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView7"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:text="À débiter :"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="137dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_centerVertical="true"
+            android:text="À créditer :"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="137dp" />
+
+        <Spinner
+            android:id="@+id/ab_compte_debit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ab_banque_debit"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/ab_banque_debit"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="154dp" />
+
+        <Spinner
+            android:id="@+id/ab_banque_debit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="154dp" />
+
+        <Spinner
+            android:id="@+id/ab_banque_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_toStartOf="@+id/ab_compte_debit"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="154dp" />
+
+        <Spinner
+            android:id="@+id/ab_compte_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ab_banque_credit"
+            android:layout_marginTop="21dp"
+            android:layout_toEndOf="@+id/ab_banque_credit"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="154dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ab_compte_credit"
+            android:layout_marginTop="26dp"
+            android:layout_toStartOf="@+id/et_av_montant"
+            android:text="Montant :" />
+
+        <EditText
+            android:id="@+id/et_av_montant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/ab_compte_credit"
+            android:layout_alignStart="@+id/ab_banque_credit"
+            android:layout_below="@+id/textView6"
+            android:ems="10"
+            android:inputType="number"
+            android:text="00.00"
+            android:textAlignment="textEnd"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_av_valider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="22dp"
+            android:layout_marginEnd="31dp"
+            android:text="Valider" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_toEndOf="@+id/et_av_montant"
+            android:text="€"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+</LinearLayout>

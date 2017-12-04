@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Boursorama">
+        <item>Compte 1</item>
+        <item>Compte 2</item>
+        <item>Compte 3</item>
+    </string-array>
+
+    <string-array name="Monabanq">
+        <item>Compte A</item>
+        <item>Compte B</item>
+        <item>Compte C</item>
+    </string-array>
+
+    <string-array name="HSBC">
+        <item>Compte 0</item>
+        <item>Compte 1</item>
+        <item>Compte 10</item>
+    </string-array>
+</resources>

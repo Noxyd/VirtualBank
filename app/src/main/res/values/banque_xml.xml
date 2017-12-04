@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="avail_banque">
-        <item>Boursorama Banque</item>
+        <item>Boursorama</item>
         <item>Monabanq</item>
         <item>HSBC</item>
         <item>BNP Paribas</item>
