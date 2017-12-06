@@ -68,8 +68,8 @@ public class Accueil extends AppCompatActivity{
         }
 
         //afficher le solde --pas encore opé-- pour la différence avec la valeur ajouté à la mano dans ajoutOperation
-        TextView solde = (TextView) findViewById(R.id.monSolde);
-        solde.setText("Solde : " + sld +" "+ devise);
+        //TextView solde = (TextView) findViewById(R.id.monSolde);
+        //solde.setText("Solde : " + sld +" "+ devise);
 
         //allé sur l'activité ajouterOperation
         final Button ajouter = (Button) findViewById(R.id.bAjouterOp);
