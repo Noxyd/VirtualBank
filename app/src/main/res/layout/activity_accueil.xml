@@ -10,6 +10,191 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:id="@+id/bAjouterOp"
+            style="@android:style/Widget.Button"
+            android:layout_width="334dp"
+            android:layout_height="78dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Ajouter Opération"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/monSolde"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Mon Solde :"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="0.05" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:layout_weight="60">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30">
+
+                        <TextView
+                            android:id="@+id/col1Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dépense" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20">
+
+                        <TextView
+                            android:id="@+id/col2Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Montant" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20">
+
+                        <TextView
+                            android:id="@+id/col3Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30">
+
+                        <TextView
+                            android:id="@+id/col4Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catégorie" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="186dp"
+                    android:layout_weight="90">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <RelativeLayout
+                                android:id="@+id/col1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="30">
+
+                                <TextView
+                                    android:id="@+id/col1TextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="TextView" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/col2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="20">
+
+                                <TextView
+                                    android:id="@+id/col2TextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/col3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="20">
+
+                                <TextView
+                                    android:id="@+id/col3TextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/col4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="30">
+
+                                <TextView
+                                    android:id="@+id/col4TextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/id_btn_releve_bancaire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Relevé Bancaire" />
+
+        <Button
+            android:id="@+id/id_btn_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.05"
+            android:text="Map" />
+
         <Button
             android:id="@+id/id_btn_releve_bancaire"
             android:layout_width="wrap_content"

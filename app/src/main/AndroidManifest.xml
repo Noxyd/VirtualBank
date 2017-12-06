@@ -28,6 +28,7 @@
         <activity android:name=".AjoutBanque" />
         <activity android:name=".Stat" />
         <activity android:name=".AjoutVirement" />
+        <activity android:name=".AjouterOperation" />
     </application>
 
 </manifest>

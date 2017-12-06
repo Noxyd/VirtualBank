@@ -15,4 +15,6 @@
         completions."
     </string>
     <string name="title_activity_connexion">Connectez-vous</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_ajouter_operation">AjouterOperation</string>
 </resources>
