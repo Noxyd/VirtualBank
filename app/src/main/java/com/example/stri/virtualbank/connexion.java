@@ -12,7 +12,7 @@ public class connexion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         setContentView(R.layout.activity_connexion);
 
         final Button btn_connect = (Button) findViewById(R.id.id_btn_connect);
