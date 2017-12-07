@@ -4,20 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/id_bt_menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/burger"
+            app:layout_constraintStart_toStartOf="@+id/monSolde"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/id_bt_return"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/back" />
+
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/id_bt_menu"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="44dp"
             android:text="Ajouter une Banque"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="105dp"
@@ -70,12 +88,12 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ab_mdputilisateur"
+            android:layout_below="@+id/ab_idutilisateur"
             android:layout_marginTop="31dp"
             android:text="Mot de passe"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="288dp"
-            android:layout_below="@+id/ab_idutilisateur"
-            android:layout_alignStart="@+id/ab_mdputilisateur" />
+            tools:layout_editor_absoluteY="288dp" />
 
         <EditText
             android:id="@+id/ab_mdputilisateur"
@@ -104,20 +122,120 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ab_valider"
+            android:layout_marginTop="15dp"
             android:text="Les identifiants correspondent à ceux utilisés sur le site web de votre banque."
             android:textColor="?android:attr/textColorSecondaryInverseNoDisable"
             android:textSize="12sp"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="484dp"
-            android:layout_below="@+id/ab_valider"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="15dp" />
-    </RelativeLayout>
+            tools:layout_editor_absoluteY="484dp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/id_frame_layout_accueil"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/backg_alpha_black"
+            android:visibility="invisible">
 
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/id_btn_home"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="96dp"
+                    android:background="@drawable/home"
+                    android:elevation="0dp"
+                    android:gravity="bottom|center"
+                    android:shadowRadius="2"
+                    android:textColor="?android:attr/colorForeground"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/id_btn_releve_bancaire"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/file"
+                    android:elevation="0dp"
+                    android:gravity="bottom|center"
+                    android:shadowRadius="2"
+                    android:textColor="?android:attr/colorForeground"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_btn_home" />
+
+                <Button
+                    android:id="@+id/id_btn_liste_compte"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/credit_card"
+                    android:elevation="0dp"
+                    android:gravity="bottom|center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_btn_releve_bancaire" />
+
+                <Button
+                    android:id="@+id/id_btn_virement"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/right_arrow"
+                    android:elevation="0dp"
+                    android:gravity="bottom|center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_btn_liste_compte" />
+
+                <Button
+                    android:id="@+id/id_btn_stat"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/pie_chart"
+                    android:elevation="0dp"
+                    android:gravity="bottom|center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_btn_virement" />
+
+                <Button
+                    android:id="@+id/id_btn_map"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/placeholder"
+                    android:elevation="0dp"
+                    android:gravity="bottom|center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_btn_stat" />
+            </android.support.constraint.ConstraintLayout>
+
+        </FrameLayout>
     </RelativeLayout>
 
 </LinearLayout>

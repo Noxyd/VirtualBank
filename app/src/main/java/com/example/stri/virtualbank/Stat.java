@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -216,5 +217,89 @@ public class Stat extends AppCompatActivity {
         lChart.invalidate(); // refresh*/
 
         //END PIE CHART
+
+        /* PART OF THE LEFT LAYOUT FRAGMENT MENU */
+        final Button btn_menu = (Button) findViewById(R.id.id_bt_menu);
+
+        final FrameLayout frameLayout = (FrameLayout) findViewById(R.id.id_frame_layout_accueil);
+
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(frameLayout.getVisibility() == View.VISIBLE)
+                    frameLayout.setVisibility(View.INVISIBLE);
+                else
+                    frameLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //allé sur l'activité mapsActivity
+        final Button btn_map = (Button) findViewById(R.id.id_btn_map);
+
+        /*btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Accueil.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });*/
+
+
+        // -    to remove   -
+        //  -   BEGIN     -
+        final Button btn_return = (Button) findViewById(R.id.id_bt_return);
+        final Button btn_home = (Button) findViewById(R.id.id_btn_home);
+        final Button btn_rlv = (Button) findViewById(R.id.id_btn_releve_bancaire);
+        final Button btn_lcpt = (Button) findViewById(R.id.id_btn_liste_compte);
+        final Button btn_vir = (Button) findViewById(R.id.id_btn_virement);
+
+        btn_return.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                frameLayout.setVisibility(View.INVISIBLE);
+                Stat.this.finish();
+            }
+        });
+
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                frameLayout.setVisibility(View.INVISIBLE);
+                Intent intent = new Intent(Stat.this, Accueil.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_rlv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                frameLayout.setVisibility(View.INVISIBLE);
+                Intent intent = new Intent(Stat.this, ReleveBancaire.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btn_lcpt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                frameLayout.setVisibility(View.INVISIBLE);
+                Intent intent = new Intent(Stat.this, ListeCompte.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_vir.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                frameLayout.setVisibility(View.INVISIBLE);
+                Intent intent = new Intent(Stat.this, AjoutVirement.class);
+                startActivity(intent);
+            }
+        });
+        /* END OF FRAGMENT */
     }
 }

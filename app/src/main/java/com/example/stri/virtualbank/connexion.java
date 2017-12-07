@@ -27,8 +27,8 @@ public class connexion extends AppCompatActivity {
                 String mail = new String();
                 String mdp = new String();
 
-                mail = "mail";
-                mdp = "pass";
+                mail = "";
+                mdp = "";
 
                 EditText champ_mail = (EditText) findViewById(R.id.id_text_mail);
                 EditText champ_mdp = (EditText) findViewById(R.id.id_text_mdp);

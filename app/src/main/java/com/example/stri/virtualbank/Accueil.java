@@ -10,6 +10,7 @@ package com.example.stri.virtualbank;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.Button;
+        import android.widget.FrameLayout;
         import android.widget.TextView;
         import java.util.ArrayList;
 
@@ -81,10 +82,35 @@ public class Accueil extends AppCompatActivity{
             }
         });
 
-        //allé sur l'activité mapsActivity
-    /*    final Button btn_map = (Button) findViewById(R.id.id_btn_map);
+        final Button btn_disconnect = (Button) findViewById(R.id.id_btn_deconnexion);
 
-        btn_map.setOnClickListener(new View.OnClickListener() {
+        btn_disconnect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Accueil.this, connexion.class);
+                startActivity(intent);
+            }
+        });
+
+        /* PART OF THE LEFT LAYOUT FRAGMENT MENU */
+        final Button btn_menu = (Button) findViewById(R.id.id_bt_menu);
+
+        final FrameLayout frameLayout = (FrameLayout) findViewById(R.id.id_frame_layout_accueil);
+
+        btn_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(frameLayout.getVisibility() == View.VISIBLE)
+                    frameLayout.setVisibility(View.INVISIBLE);
+                else
+                    frameLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //allé sur l'activité mapsActivity
+       final Button btn_map = (Button) findViewById(R.id.id_btn_map);
+
+        /*btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -106,7 +132,7 @@ public class Accueil extends AppCompatActivity{
         btn_rlv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                frameLayout.setVisibility(View.INVISIBLE);
                 Intent intent = new Intent(Accueil.this, ReleveBancaire.class);
                 startActivity(intent);
             }
@@ -116,7 +142,7 @@ public class Accueil extends AppCompatActivity{
         btn_lcpt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                frameLayout.setVisibility(View.INVISIBLE);
                 Intent intent = new Intent(Accueil.this, ListeCompte.class);
                 startActivity(intent);
             }
@@ -126,6 +152,7 @@ public class Accueil extends AppCompatActivity{
 
             @Override
             public void onClick(View view) {
+                frameLayout.setVisibility(View.INVISIBLE);
                 Intent intent = new Intent(Accueil.this, Stat.class);
                 startActivity(intent);
             }
@@ -135,6 +162,7 @@ public class Accueil extends AppCompatActivity{
 
             @Override
             public void onClick(View view) {
+                frameLayout.setVisibility(View.INVISIBLE);
                 Intent intent = new Intent(Accueil.this, AjoutVirement.class);
                 startActivity(intent);
             }
