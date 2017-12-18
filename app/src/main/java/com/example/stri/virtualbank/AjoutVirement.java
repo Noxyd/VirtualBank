@@ -116,8 +116,8 @@ public class AjoutVirement extends AppCompatActivity implements AdapterView.OnIt
         });*/
 
 
-        // -    to remove   -
-        //  -   BEGIN     -
+        //récupération & attribution d'actions de redirection aux boutons
+
         final Button btn_return = (Button) findViewById(R.id.id_bt_return);
         final Button btn_home = (Button) findViewById(R.id.id_btn_home);
         final Button btn_rlv = (Button) findViewById(R.id.id_btn_releve_bancaire);

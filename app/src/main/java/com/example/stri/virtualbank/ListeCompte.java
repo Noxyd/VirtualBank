@@ -10,31 +10,48 @@ import android.widget.TextView;
 
 public class ListeCompte extends AppCompatActivity {
 
-    //test var
+    //Liste de banques et de comptes factices, pour simuler l'utilisateur de l'application
     String banque[] = {"Banque Postale","Société Générale", "HSBC"};
-
     String compte[][] = {{"Compte A", "Compte B", "Compte C"},{"Compte 1", "Compte 2", "Compte 3"}, {"Compte H", "Compte I", "Compte J"}};
 
+    //récupére l'index d'une banque à partir de son nom
     int getIndexOfBank(String pNomBanque){
+        //début à 0
         int index = 0;
+        //variable booleenne pour la boucle while
         boolean lContinue = true;
 
+        //tant que la boucle n'est pas finie
         while(lContinue){
+            //si on a trouvé le bon index
             if(banque[index].compareTo(pNomBanque) == 0){
                 lContinue = false;
             }
             else
+                //sinon on incrémente
                 index++;
+
+            //si l'index est supérieur à la longueur du tableau, on a testé toutes les valeurs donc on sort de la boucle
+            //aussi, on invalide l'index
+            if(index > banque.length -1){
+                index = -1;
+                lContinue = false;
+            }
         }
 
         return index;
     }
 
+    //récupère le nombre de compte lié à une banque
     int getNbOfCountByBank(String pNomBanque){
-        String lCompteOfBank[];
+        //Variable qui stocke les comptes de la banque en question
+        String lCompteOfBank[] = {};
 
-        lCompteOfBank = compte[getIndexOfBank(pNomBanque)];
+        //Si l'index est valide, on remplit le tableau
+        if(getIndexOfBank(pNomBanque) != -1)
+            lCompteOfBank = compte[getIndexOfBank(pNomBanque)];
 
+        //On retourne le nombre de compte lié à la banque
         return lCompteOfBank.length;
     }
 
@@ -42,13 +59,14 @@ public class ListeCompte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.liste_compte);
-        final Button btn_lcptadd = (Button) findViewById(R.id.lc_ajoutbanque);
 
+        //récupération du bouton d'ajout de banque
+        final Button btn_lcptadd = (Button) findViewById(R.id.lc_ajoutbanque);
 
         //récupérer les 4 colonnes
         TextView txcol3 = (TextView) findViewById(R.id.col3TextView);
 
-
+        //remplir l'affichage avec la liste des comptes et les banques
         for(int i = 0; i < banque.length; i++){
             txcol3.setText(txcol3.getText() + banque[i] + "\n");
             for(int j = 0; j < getNbOfCountByBank(banque[i]); j++){
@@ -57,16 +75,17 @@ public class ListeCompte extends AppCompatActivity {
 
         }
 
+        //si l'utilisateur appuie sur 'ajout banque'
         btn_lcptadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //redirection vers la page associée
                 Intent intent = new Intent(ListeCompte.this, AjoutBanque.class);
                 startActivity(intent);
             }
         });
 
-/* PART OF THE LEFT LAYOUT FRAGMENT MENU */
+    /* PART OF THE LEFT LAYOUT FRAGMENT MENU */
         final Button btn_menu = (Button) findViewById(R.id.id_bt_menu);
 
         final FrameLayout frameLayout = (FrameLayout) findViewById(R.id.id_frame_layout_accueil);
@@ -94,8 +113,7 @@ public class ListeCompte extends AppCompatActivity {
         });*/
 
 
-        // -    to remove   -
-        //  -   BEGIN     -
+        //récupération & attribution d'actions de redirection aux boutons
         final Button btn_return = (Button) findViewById(R.id.id_bt_return);
         final Button btn_home = (Button) findViewById(R.id.id_btn_home);
         final Button btn_rlv = (Button) findViewById(R.id.id_btn_releve_bancaire);
@@ -148,6 +166,5 @@ public class ListeCompte extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /* END OF FRAGMENT */
     }
 }

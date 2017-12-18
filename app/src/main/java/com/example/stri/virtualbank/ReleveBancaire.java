@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class ReleveBancaire extends AppCompatActivity {
 
-    //test var
+    //Liste de dépenses pour simuler l'utilisateur de l'application
     String tableauDepense[] = {"LIDL", "IrishPub", "SkiLocation", "ToTale", "truc", "Muche", "Gaumont", "Micromania", "IrishPub", "SkiLocation", "ToTale", "truc", "Muche", "Gaumont", "Micromania", "IrishPub", "SkiLocation", "ToTale", "truc", "Muche", "Gaumont", "Micromania", "IrishPub", "SkiLocation", "ToTale", "truc", "Muche", "Gaumont", "Micromania"};
     double tableauMontant[] = {40.50, 38., 41., 48., 1.50, 140., 7., 25.99, 38., 41., 48., 1.50, 140., 7., 25.99, 38., 41., 48., 1.50, 140., 7., 25.99, 38., 41., 48., 1.50, 140., 7., 25.99};
     String tableauDate[] = {"12/06/17", "11/05/17", "01/05/17", "04/04/17", "13/03/17", "12/03/17", "11/03/17", "10/03/17", "11/05/17", "01/05/17", "04/04/17", "13/03/17", "12/03/17", "11/03/17", "10/03/17", "11/05/17", "01/05/17", "04/04/17", "13/03/17", "12/03/17", "11/03/17", "10/03/17", "11/05/17", "01/05/17", "04/04/17", "13/03/17", "12/03/17", "11/03/17", "10/03/17"};
@@ -27,6 +27,7 @@ public class ReleveBancaire extends AppCompatActivity {
         TextView txcol3 = (TextView) findViewById(R.id.col3TextView);
         TextView txcol4 = (TextView) findViewById(R.id.col4TextView);
 
+        //ajouter les valeurs des variables tests à l'affichage
         for(int i = 0; i < tableauDepense.length; i++){
             txcol1.setText(txcol1.getText() + tableauDepense[i] + "\n");
             txcol2.setText(txcol2.getText() + String.valueOf(tableauMontant[i]) + "\n");
@@ -34,8 +35,7 @@ public class ReleveBancaire extends AppCompatActivity {
             txcol4.setText(txcol4.getText() + tableauCategorie[i] + "\n");
         }
 
-
-        /* PART OF THE LEFT LAYOUT FRAGMENT MENU */
+        //récupération & attribution d'actions de redirection aux boutons
         final Button btn_menu = (Button) findViewById(R.id.id_bt_menu);
 
         final FrameLayout frameLayout = (FrameLayout) findViewById(R.id.id_frame_layout_accueil);
@@ -62,9 +62,6 @@ public class ReleveBancaire extends AppCompatActivity {
             }
         });*/
 
-
-        // -    to remove   -
-        //  -   BEGIN     -
         final Button btn_return = (Button) findViewById(R.id.id_bt_return);
         final Button btn_home = (Button) findViewById(R.id.id_btn_home);
         final Button btn_lcpt = (Button) findViewById(R.id.id_btn_liste_compte);

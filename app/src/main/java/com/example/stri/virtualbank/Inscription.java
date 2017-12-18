@@ -14,16 +14,20 @@ public class Inscription extends AppCompatActivity {
         setContentView(R.layout.activity_inscription);
         getSupportActionBar().hide();
 
+        //récupération du bouton valider
         final Button btn_inscription_valider = (Button) findViewById(R.id.id_btn_inscription_valider);
 
-
+        //si l'utilisateur appuie sur 'valider' :
         btn_inscription_valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View s) {
+                //redirection vers la page connexion
                 Intent intent = new Intent(Inscription.this, connexion.class);
                 startActivity(intent);
             }
         });
+
+        //Pas de traitement supplémentaire car cette version ne supporte pas l'inscription utilisateur.
     }
 
 

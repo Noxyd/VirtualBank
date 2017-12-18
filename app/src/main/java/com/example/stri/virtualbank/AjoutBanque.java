@@ -26,11 +26,12 @@ public class AjoutBanque extends AppCompatActivity {
 
         //Récupération de la ressource stockée dans avail_banque.xml
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.avail_banque, android.R.layout.simple_spinner_item);
-
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+
         //Ajout de cette ressource dans le spinner
         banques.setAdapter(adapter);
 
+        //Action lorsque l'utilisateur souhaite ajouter un compte
         btnListeCompte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,21 +56,10 @@ public class AjoutBanque extends AppCompatActivity {
             }
         });
 
-        //allé sur l'activité mapsActivity
+        //aller sur l'activité mapsActivity
         final Button btn_map = (Button) findViewById(R.id.id_btn_map);
 
-        /*btn_map.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(Accueil.this, MapsActivity.class);
-                startActivity(intent);
-            }
-        });*/
-
-
-        // -    to remove   -
-        //  -   BEGIN     -
+        //récupération & attribution d'actions de redirection aux boutons
         final Button btn_return = (Button) findViewById(R.id.id_bt_return);
         final Button btn_home = (Button) findViewById(R.id.id_btn_home);
         final Button btn_rlv = (Button) findViewById(R.id.id_btn_releve_bancaire);
@@ -77,6 +67,7 @@ public class AjoutBanque extends AppCompatActivity {
         final Button btn_stat = (Button) findViewById(R.id.id_btn_stat);
         final Button btn_vir = (Button) findViewById(R.id.id_btn_virement);
 
+        //attribution d'actions aux boutons
         btn_return.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,6 +124,5 @@ public class AjoutBanque extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /* END OF FRAGMENT */
     }
 }

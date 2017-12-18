@@ -39,11 +39,11 @@ public class Stat extends AppCompatActivity {
         setContentView(R.layout.activity_stat);
 
         //BEGIN LINE CHART
+        //récupération de la line chart
 
         LineChart lChart = (LineChart) findViewById(R.id.lineChart);
 
-        //fill charts
-        //begin
+        //Remplissage de la line data avec des valeurs factices
         List<Entry> lEntries = new ArrayList<Entry>();
 
         lEntries.add(new Entry(700, 0));
@@ -55,11 +55,12 @@ public class Stat extends AppCompatActivity {
         lEntries.add(new Entry(789, 6));
         lEntries.add(new Entry(1002, 7));
 
-
+        //Création d'une ligne de données et configuration
         LineDataSet lDataSet = new LineDataSet(lEntries, "Compte 1");
         lDataSet.setColor(CYAN);
         lDataSet.setValueTextColor(CYAN);
 
+        //Remplissage d'une deuxième line data avec valeurs factices
         List<Entry> lEntries2 = new ArrayList<Entry>();
 
         lEntries2.add(new Entry(201, 0));
@@ -71,11 +72,12 @@ public class Stat extends AppCompatActivity {
         lEntries2.add(new Entry(79, 6));
         lEntries2.add(new Entry(101, 7));
 
-
+        //Création d'une ligne de données et configuration
         LineDataSet lDataSet2 = new LineDataSet(lEntries2, "Compte 2");
         lDataSet2.setColor(BLUE);
         lDataSet2.setValueTextColor(BLUE);
 
+        //Remplissage d'une troisième line data avec valeurs factices
         List<Entry> lEntries3 = new ArrayList<Entry>();
 
         lEntries3.add(new Entry(456, 0));
@@ -87,11 +89,12 @@ public class Stat extends AppCompatActivity {
         lEntries3.add(new Entry(156, 6));
         lEntries3.add(new Entry(99, 7));
 
-
+        //Création d'une ligne de données et configuration
         LineDataSet lDataSet3 = new LineDataSet(lEntries3, "Compte 3");
         lDataSet3.setColor(RED);
         lDataSet3.setValueTextColor(RED);
 
+        //Créations des labels de la line chart
         ArrayList<String> lLabels = new ArrayList<String>();
         lLabels.add("Juin");
         lLabels.add("Juillet");
@@ -102,11 +105,13 @@ public class Stat extends AppCompatActivity {
         lLabels.add("Décembre");
         lLabels.add("Janvier");
 
+        //Création d'une arraylist de line data en vue de les ajouter au visuel (line chart)
         ArrayList<ILineDataSet> lLineDataSets = new ArrayList<ILineDataSet>();
         lLineDataSets.add(lDataSet);
         lLineDataSets.add(lDataSet2);
         lLineDataSets.add(lDataSet3);
 
+        //Ajout au visuel
         LineData lLineData = new LineData(lLabels, lLineDataSets);
         lChart.setDescription("(en €)");
         lChart.setData(lLineData);
@@ -116,16 +121,16 @@ public class Stat extends AppCompatActivity {
 
         //BEGIN PIE CHART
 
+        //récupération de la pie chart
         PieChart pChart = (PieChart) findViewById(R.id.pieChart);
 
-        //fill charts
-        //begin
+        //remplissage de la pie data avec des valeurs factices
         List<Entry> pEntries = new ArrayList<Entry>();
-
         pEntries.add(new Entry(80f, 0));
         pEntries.add(new Entry(10f, 1));
         pEntries.add(new Entry(10f, 2));
 
+        //Créations des labels de la pie chart et configuration
         PieDataSet pDataSet = new PieDataSet(pEntries, "");
         ArrayList<String> pLabels = new ArrayList<String>();
         pLabels.add("Compte 1");
@@ -135,6 +140,7 @@ public class Stat extends AppCompatActivity {
         int[] tab = {CYAN, BLUE, RED};
         pDataSet.setColors(tab);
 
+        //ajout au visuel
         PieData pLineData = new PieData(pLabels, pDataSet);
         pChart.setData(pLineData);
         pChart.setDescription("(en %)");
@@ -146,8 +152,7 @@ public class Stat extends AppCompatActivity {
 
         BarChart bChart = (BarChart) findViewById(R.id.barChart);
 
-        //fill charts
-        //begin
+        //remplissage d'un arraylist avec des valeurs factices de la bar chart
         List<BarEntry> bEntries = new ArrayList<BarEntry>();
 
         bEntries.add(new BarEntry(4f, 0));
@@ -159,6 +164,8 @@ public class Stat extends AppCompatActivity {
 
         BarDataSet bDataSet = new BarDataSet(bEntries, "Compte 1");
 
+
+        //remplissage d'un arraylist avec des valeurs factices de la bar chart
         List<BarEntry> bEntries2 = new ArrayList<BarEntry>();
 
         bEntries2.add(new BarEntry(0f, 0));
@@ -170,6 +177,8 @@ public class Stat extends AppCompatActivity {
 
         BarDataSet bDataSet2 = new BarDataSet(bEntries2, "Compte 2");
 
+
+        //remplissage d'un arraylist avec des valeurs factices de la bar chart
         List<BarEntry> bEntries3 = new ArrayList<BarEntry>();
 
         bEntries3.add(new BarEntry(0f, 0));
@@ -181,6 +190,7 @@ public class Stat extends AppCompatActivity {
 
         BarDataSet bDataSet3 = new BarDataSet(bEntries3, "Compte 3");
 
+        //Création des labels de la bar chart
         ArrayList<String> bLabels = new ArrayList<String>();
         bLabels.add("Cad.");
         bLabels.add("Voit.");
@@ -189,6 +199,7 @@ public class Stat extends AppCompatActivity {
         bLabels.add("Sort.");
         bLabels.add("Jeux");
 
+        //création des data de la bar chart avec les précédents arraylist + configuration du visuel
         BarData bLineData = new BarData(bLabels, bDataSet);
 
         ArrayList<IBarDataSet> bBarDataSets = new ArrayList<IBarDataSet>();
@@ -200,21 +211,12 @@ public class Stat extends AppCompatActivity {
         bBarDataSets.add(bDataSet2);
         bBarDataSets.add(bDataSet3);
 
+        //ajout des data au visuel
         BarData barData = new BarData(bLabels, bBarDataSets);
 
         bChart.setData(barData);
         bChart.setDescription("(en %)");
-        bChart.invalidate(); // refresh
-
-        /*ArrayList<ILineDataSet> lLineDataSets = new ArrayList<ILineDataSet>();
-        lLineDataSets.add(lDataSet);
-        lLineDataSets.add(lDataSet2);
-        lLineDataSets.add(lDataSet3);
-
-        LineData lLineData = new LineData(lLabels, lLineDataSets);
-        lChart.setDescription("(en €)");
-        lChart.setData(lLineData);
-        lChart.invalidate(); // refresh*/
+        bChart.invalidate();
 
         //END PIE CHART
 
@@ -246,8 +248,7 @@ public class Stat extends AppCompatActivity {
         });*/
 
 
-        // -    to remove   -
-        //  -   BEGIN     -
+        //récupération & attribution d'actions de redirection aux boutons
         final Button btn_return = (Button) findViewById(R.id.id_bt_return);
         final Button btn_home = (Button) findViewById(R.id.id_btn_home);
         final Button btn_rlv = (Button) findViewById(R.id.id_btn_releve_bancaire);
